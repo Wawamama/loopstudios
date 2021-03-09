@@ -17,6 +17,27 @@
 
 body {
     font-size: 2vw;
+    font-family: 'Alata', sans-serif;
+}
+
+@media only screen and (min-width:1025px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-stretch: semi-condensed;
+    font-size: 2em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
 }
 
 .hero {
@@ -29,25 +50,54 @@ body {
     position: relative;
 }
 
-.hero nav {
-    position: absolute;
-    right: 10vw;
-    top:60px;
+.hero_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    font-stretch: semi-condensed;
-    font-size: 2em;
-    color: var(--white);
-    text-transform: uppercase;
+/** menu button style **/
+
+.hamburger-btn {
+    width: 24px;
+    height: 16px;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    transform: translateY(-100px);
 }
+
+@media only screen and (max-width: 480px) {
+    .hamburger-btn {
+        transform: translateY(0);
+    }
+}
+/** </button style> **/
+
+/** nav bar style **/
+
+.hero ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: flex-end;
+    list-style: none;
+}
+
+.nav {
+    font-size: 1em;
+}
+.hero ul li {
+    margin-left: 20px;
+}
+
 
 .logo {
     width: 100%;
     height: auto;
-    max-width: 192px ;
+    max-width: 192px;
+    max-height: 32px;
 }
 
 .hero_text {
