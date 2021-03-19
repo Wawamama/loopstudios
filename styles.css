@@ -97,6 +97,10 @@ section {
     padding: 60px 10vw 120px 10vw;
     position: relative;
 }
+.hero_container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
 .hero_top {
     display: flex;
@@ -159,6 +163,8 @@ section {
 
 .main-container {
     padding: 1px 10vw;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sub-hero_container {
@@ -205,6 +211,8 @@ section {
 .grid-item {
     object-fit: cover;
     position: relative;
+    max-height: 450px;
+    max-width: 255px;
    
 }
 .creations_projects h3 {
