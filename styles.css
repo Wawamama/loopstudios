@@ -138,11 +138,33 @@ section {
 }
 
 #nav {
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 .hero ul li {
     margin-left: 20px;
+    position: relative;
 }
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    height: 2px;
+    width: 0px;
+    background-color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover::before {
+    width: 60%;
+}
+
+.hero a { 
+    padding-bottom: 10px;
+    animation: border 1s ease;
+}
+
 
 
 .logo {
@@ -226,6 +248,29 @@ section {
     height: 100%;
     object-fit: cover;
 }
+
+.grid-item:hover .hover-bg {
+    opacity: 0.7;
+}
+
+.grid-item:hover h3 {
+    color: black;
+    z-index: 2;
+}
+
+.hover-bg {
+    z-index: 2;
+    background-color:white;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+
+/** FOOTER **/
 
 footer {
     background-color: black;
