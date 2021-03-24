@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+/** VARIABLES **/
+:root {
+    --white:hsl(0, 0%, 100%);
+    --black;hsl(0, 0%, 0%);
+    --darkgrey:hsl(0, 0%, 55%);
+    --vdarkgrey:hsl(0, 0%, 41%);
+
+}
+
+/** GENERAL **/
+
+body {
+    font-size: 16px;
+    font-family: 'Alata', sans-serif;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-stretch: semi-condensed;
+    font-size: 2.3em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-stretch: semi-condensed;
+    font-size: 2.5em;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-stretch: semi-condensed;
+    font-size: 1.3em;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+p {
+    line-height: 2vh;
+    font-size: 1em;
+    color: var(--darkgrey);
+    line-height: 2;
+}
+
+.button {
+    border: solid 1px black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 4px;
+    outline: none;
+    color: var(--black);
+    background-color: var(--white);
+    width: 25vw;
+    padding: 10px 5px;
+    cursor: pointer;
+   
+}
+
+.button:hover {
+    color:white;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+/** HERO **/
+section {
+    margin-bottom: 10vh;
+}
+
+.hero {
+    color: var(--white);
+    background-image: url(./assets/img/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 60px 10vw 120px 10vw;
+    position: relative;
+}
+.hero_container, .footer_container {
+    margin: 0 auto;
+}
+
+.hero_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** menu button style **/
+
+.hamburger-btn {
+    width: 24px;
+    height: 16px;
+    background-color: transparent;
+    outline: none;
+    border-style: none;
+    cursor: pointer;
+    text-align: right;
+    z-index: 2;
+}
+
+
+/** nav bar style **/
+
+.hero ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: flex-end;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-stretch: condensed;
+    font-size: 2em;
+    color: var(--white);
+    text-transform: uppercase;
+    padding-top: 35vh;
+    padding-left: 5vw;
+
+}
+
+#nav {
+    font-size: 0.9em;
+    background-color: black;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transform: translateY(-100vh);
+}
+
+
+.hero ul li {
+    margin-left: 20px;
+    margin-bottom: 4vh;
+    position: relative;
+}
+
+
+.hero a { 
+    padding-bottom: 10px;
+    animation: border 1s ease;
+}
+
+/** TOGGLE NAV **/
+
+.active-nav #nav {
+    transform: translateY(100vh);
+} 
+
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 192px;
+    max-height: 32px;
+    z-index: 2;
+}
+
+.hero_text {
+    margin-top: 25vh;
+    width: 88%;
+    border: solid 2px var(--white);
+    padding: 1em 30px 0.6em 1em;
+}
+
+.hero_text h1 {
+    font-size: 3em;
+    padding: 5%;
+}
+
+/** VR **/
+.main-container, .footer_container {
+    padding: 1px 10vw;
+    
+    margin: 0 auto;
+}
+
+.sub-hero_container {
+    position: relative;
+}
+.vr-guy {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+
+.sub-hero_txt {
+   margin-top: 5vh;
+   text-align: center;
+   
+}
+
+.sub-hero h2 {
+    margin-bottom: 30px;
+}
+
+.sub-hero p {
+    width: 90%;
+    margin: auto;
+}
+
+/** CREATIONS **/
+
+.creations {
+    position: relative;
+}
+
+.creations button {
+    position: absolute;
+    bottom: -2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.creations_top {
+    text-align: center;
+}
+
+.creations_projects {
+    display: flex;
+   flex-direction: column;
+    margin-top: 8vh;
+    justify-content: space-between;
+}
+
+.grid-item {
+    object-fit: cover;
+    position: relative;
+    margin-bottom: 3vh;
+}
+.creations_projects h3 {
+    position: absolute;
+    bottom:15%;
+    left: 5%;
+    font-size: 1.6em;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item:hover .hover-bg {
+    opacity: 0.7;
+}
+
+.grid-item:hover h3 {
+    color: black;
+    z-index: 2;
+}
+
+.hover-bg {
+    z-index: 2;
+    background-color:white;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+/** FOOTER **/
+
+footer {
+    background-color: black;
+    padding: 5vh 0;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_logo {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.footer_nav {
+    font-size: 0.6em;
+    margin-bottom: 5vh;
+}
+
+.footer_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    list-style: none;
+}
+
+.footer_nav ul li {
+    font-size: 2em;
+    text-align: center;
+    line-height: 3;
+}
+
+.social-links {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.social-links img {
+    height: 25px;
+    width: 25px;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+
+.copyright {
+    color: var(--darkgrey);
+    font-size: 0.9em;
+    text-align: center;
+}
