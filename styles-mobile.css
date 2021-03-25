@@ -9,7 +9,7 @@
 /** VARIABLES **/
 :root {
     --white:hsl(0, 0%, 100%);
-    --black;hsl(0, 0%, 0%);
+    --black:hsl(0, 0%, 0%);
     --darkgrey:hsl(0, 0%, 55%);
     --vdarkgrey:hsl(0, 0%, 41%);
 
@@ -61,7 +61,7 @@ p {
     line-height: 2;
 }
 
-button {
+.button {
     border: solid 1px black;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
@@ -75,7 +75,7 @@ button {
    
 }
 
-button:hover {
+.button:hover {
     color:white;
     background-color: black;
     transition: all 0.3s ease-in-out;
@@ -115,6 +115,7 @@ section {
     border-style: none;
     cursor: pointer;
     text-align: right;
+    outline: none;
     z-index: 2;
 }
 
@@ -141,12 +142,18 @@ section {
     font-size: 0.9em;
     background-color: black;
     height: 100vh;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    transform: translateY(-100vh);
+    transform: translateY(-100%);
+    transition: all 0.4s ease-out;
 }
+
+#nav.active-nav {
+    transform:translateY(0);
+}
+
 .hero ul li {
     margin-left: 20px;
     margin-bottom: 4vh;
