@@ -9,7 +9,9 @@
 /** VARIABLES **/
 :root {
     --white:hsl(0, 0%, 100%);
-    --black;hsl(0, 0%, 0%);
+
+    --black:hsl(0, 0%, 0%);
+
     --darkgrey:hsl(0, 0%, 55%);
     --vdarkgrey:hsl(0, 0%, 41%);
 
@@ -112,10 +114,12 @@ section {
     width: 24px;
     height: 16px;
     background-color: transparent;
-    outline: none;
+
     border-style: none;
     cursor: pointer;
     text-align: right;
+    outline: none;
+
     z-index: 2;
 }
 
@@ -142,11 +146,16 @@ section {
     font-size: 0.9em;
     background-color: black;
     height: 100vh;
-    position: absolute;
+    width: 100vw;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    transform: translateY(-100vh);
+    transform: translateY(-100%);
+    transition: all 0.4s ease-out;
+}
+
+#nav.active-nav {
+    transform:translateY(0);
 }
 
 
@@ -161,12 +170,6 @@ section {
     padding-bottom: 10px;
     animation: border 1s ease;
 }
-
-/** TOGGLE NAV **/
-
-.active-nav #nav {
-    transform: translateY(100vh);
-} 
 
 
 .logo {
@@ -185,7 +188,9 @@ section {
 }
 
 .hero_text h1 {
-    font-size: 3em;
+
+    font-size: 2.5em;
+
     padding: 5%;
 }
 
